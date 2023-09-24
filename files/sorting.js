@@ -1,3 +1,7 @@
+// Sorting
+// Array.prototype.sort() mutates the original array
+// https://stackoverflow.com/questions/24074968/does-sort-function-change-original-array
+// So, using slice() before sort like => arr.slice().sort(...rest of the code) is recommended
 export const sorting = () => {
 	const arr = [
 		{
