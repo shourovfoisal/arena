@@ -2,10 +2,34 @@
  * My Comments
  * Source: http://www.salesianer.de/util/shortcode.js
  * Source From: http://www.salesianer.de/util/osmshortlinks.php (Also provides shortcode calculator)
+ */
+
+/**
+ * My Comments
  *
- * Sample Short Links
- * https://osm.org/go/5AFxaSLU-
- * Feed this part to the function: 5AFxaSLU-
+ * Sample latitudes and longitudes
+ *
+ * 23.775, 90.385 - Dhaka
+ * Sample Long Link
+ * https://www.openstreetmap.org/?mlat=23.775&mlon=90.385#map=14/23.775/90.385
+ *
+ * 21.4345, 91.9693 - Coxs Bazaar
+ * Sample Long Link
+ * https://www.openstreetmap.org/?mlat=21.4345&mlon=91.9693#map=14/21.4345/91.9693
+ */
+
+/**
+ * My Comments
+ *
+ * Sample short map link
+ * https://osm.org/go/5AFxcwZQ-
+ * Noakhali, Hatia
+ * https://osm.org/go/4VXO6B0-
+ *
+ * Sample short map link with marker
+ * https://osm.org/go/5AFxcwZQ-?m=
+ * Noakhali, Hatia
+ * https://osm.org/go/4VXO6B0-?m=
  */
 
 // OSM Short links functions
@@ -53,8 +77,15 @@ function interleave(x, y) {
 	return (x << 1) | y;
 }
 
+/**
+ * This function only decodes the code, and not the URL
+ * Use The following code chunk to convert the shortcode url to actual shortcode
+ * Sample shortcode url -> https://osm.org/go/4VXO6B0- or https://osm.org/go/4VXO6B0-?m=
+ * Sample shortcode -> 4VXO6B0-
+ * const url = mapLink.split("?")[0];
+ * const shortCode = url.split("/").slice().pop();
+ */
 // decode function - not optimized for speed!
-
 export function decodeShortCode(sc) {
 	const char_array =
 		"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_~";
@@ -93,14 +124,16 @@ export function decodeShortCode(sc) {
 export const parseLongLink = () => {
 	const longUrl =
 		"https://www.openstreetmap.org/?mlat=23.7993&mlon=90.3864#map=14/23.7993/90.3864";
-	const urlObject = new URL(longUrl);
+
+	const urlObject = new URL(longUrl); // use a try-catch for this line or the app may crash
 
 	// console.log(urlObject);
 
 	const [hashName, hashValue] = urlObject.hash.split("=");
-	const [zoom, mapLat, mapLong] = hashValue
-		.split("/")
-		.map(value => parseFloat(value));
+	const [zoom, mapLat, mapLong] =
+		hashName === "#map"
+			? hashValue?.split("/").map(value => parseFloat(value))
+			: [];
 
 	// console.log("--------------");
 	// console.log("📢[openStreetMapShortLinkDecoder.js:101]: hashName: ", hashName);
@@ -127,5 +160,11 @@ export const parseLongLink = () => {
 	// 	"📢[openStreetMapShortLinkDecoder.js:117]: markerLong: ",
 	// 	markerLong
 	// );
-	return [markerLat, markerLong, zoom, mapLat, mapLong];
+	return [
+		mapLat,
+		mapLong,
+		zoom,
+		markerLat || undefined,
+		markerLong || undefined,
+	];
 };
