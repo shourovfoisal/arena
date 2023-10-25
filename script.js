@@ -6,6 +6,7 @@ import {
 } from "./files/openStreetMapShortLinkDecoder.js";
 import { setTest } from "./files/setTest.js";
 import { sorting } from "./files/sorting.js";
+import { getEmbedLink } from "./files/youtubeEmbedLinkGenerator.js";
 
 console.log("---------------------------------------------------------");
 console.log("|                   Testing Ground                      |");
@@ -16,9 +17,7 @@ console.log("");
  *
  */
 
-// console.log(decodeShortCode("5AFxaSLU-"));
-// console.log(makeShortCode(23.799283504486084, 90.38640975952148, 14));
-console.log(parseLongLink());
+console.log(getEmbedLink("https://www.youtube.com/watch?v=iu0GoETMhm0"));
 
 /**
  *
