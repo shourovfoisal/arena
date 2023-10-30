@@ -1,3 +1,4 @@
+import { arrayIncludes } from "./files/arrayIncludes.js";
 import { objectCopy } from "./files/objectCopy.js";
 import {
 	decodeShortCode,
@@ -17,7 +18,7 @@ console.log("");
  *
  */
 
-console.log(getEmbedLink("https://www.youtube.com/watch?v=iu0GoETMhm0"));
+arrayIncludes();
 
 /**
  *
