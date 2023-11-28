@@ -1,4 +1,4 @@
-import { inVsHasOwn } from "./files/inOperatorVsHasOwnFn.js";
+import { loopOverObject } from "./files/objectEntries.js";
 
 console.log("---------------------------------------------------------");
 console.log("|                   Testing Ground                      |");
@@ -9,7 +9,7 @@ console.log("");
  *
  */
 
-inVsHasOwn();
+loopOverObject();
 
 /**
  *
