@@ -1,4 +1,5 @@
-import { loopOverObject } from "./files/objectEntries.js";
+import { flat } from "./files/flat.js";
+import { test } from "./files/test.js";
 
 console.log("---------------------------------------------------------");
 console.log("|                   Testing Ground                      |");
@@ -9,7 +10,7 @@ console.log("");
  *
  */
 
-loopOverObject();
+flat();
 
 /**
  *
