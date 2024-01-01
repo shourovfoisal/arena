@@ -1,4 +1,5 @@
 import { flat } from "./files/flat.js";
+import { setTest, setToArrayTest } from "./files/setTest.js";
 import { test } from "./files/test.js";
 
 console.log("---------------------------------------------------------");
@@ -10,7 +11,7 @@ console.log("");
  *
  */
 
-flat();
+setToArrayTest();
 
 /**
  *
