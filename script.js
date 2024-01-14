@@ -1,3 +1,4 @@
+import { objectDestructure } from "./files/objectDestructure.js";
 import { regex } from "./files/regex.js";
 import { test } from "./files/test.js";
 
@@ -10,7 +11,7 @@ console.log("");
  *
  */
 
-regex("extract_all_results");
+objectDestructure();
 
 /**
  *
