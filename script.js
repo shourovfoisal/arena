@@ -1,7 +1,8 @@
-import { objectDestructure } from "./files/objectDestructure.js";
-import { regex } from "./files/regex.js";
-import { test } from "./files/test.js";
-import { tryCatch } from "./files/tryCatch.js";
+import { printDateNames, printFlatDate } from "./src/dates.js";
+import { objectDestructure } from "./src/objectDestructure.js";
+import { regex } from "./src/regex.js";
+import { test } from "./src/test.js";
+import { tryCatch } from "./src/tryCatch.js";
 
 console.log("---------------------------------------------------------");
 console.log("|                   Testing Ground                      |");
@@ -12,7 +13,7 @@ console.log("");
  *
  */
 
-tryCatch();
+console.log(printFlatDate());
 
 /**
  *

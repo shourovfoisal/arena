@@ -1,9 +1,13 @@
 {
-	"dependencies": {
-		"nodemon": "^3.0.1"
-	},
-	"scripts": {
-		"start": "nodemon script.js"
-	},
-	"type": "module"
+  "dependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "scripts": {
+    "start": "nodemon script.js",
+    "doc": "jsdoc -c jsdoc.json"
+  },
+  "type": "module",
+  "devDependencies": {
+    "jsdoc": "^4.0.2"
+  }
 }
