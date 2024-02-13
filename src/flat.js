@@ -167,6 +167,7 @@ export const flatWithObjects = () => {
   ];
 
   const unifiedOptions = array.flatMap((category) => category.options);
+  // const unifiedOptions = array.map((category) => category.options).flat(); // all flatMap is: map() then flat()
 
   console.log(unifiedOptions);
 };
