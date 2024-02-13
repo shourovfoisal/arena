@@ -36,3 +36,137 @@ export const flat = () => {
   console.log(pairs.flat(-1));
   console.log("");
 };
+
+export const flatWithObjects = () => {
+  const array = [
+    {
+      id: 7,
+      label: "Media & Technologies",
+      checked: false,
+      options: [
+        {
+          id: 10,
+          label: "Computer",
+          checked: false,
+          isPopular: false,
+        },
+        {
+          id: 11,
+          label: "Telephone",
+          checked: false,
+          isPopular: false,
+        },
+        {
+          id: 12,
+          label: "Printer",
+          checked: false,
+          isPopular: false,
+        },
+      ],
+    },
+    {
+      id: 10,
+      label: "Indoor Entertainment",
+      checked: false,
+      options: [
+        {
+          id: 7,
+          label: "Book",
+          checked: false,
+          isPopular: false,
+        },
+        {
+          id: 8,
+          label: "Table Tennis",
+          checked: false,
+          isPopular: false,
+        },
+        {
+          id: 9,
+          label: "Darts",
+          checked: false,
+          isPopular: false,
+        },
+      ],
+    },
+    {
+      id: 12,
+      label: "Business Facilities",
+      checked: false,
+      options: [
+        {
+          id: 13,
+          label: "Auditorium",
+          checked: false,
+          isPopular: false,
+        },
+        {
+          id: 14,
+          label: "Conference Hostess",
+          checked: false,
+          isPopular: false,
+        },
+      ],
+    },
+    {
+      id: 13,
+      label: "General",
+      checked: false,
+      options: [
+        {
+          id: 4,
+          label: "Air Conditioning",
+          checked: false,
+          isPopular: false,
+        },
+        {
+          id: 5,
+          label: "Elevator",
+          checked: false,
+          isPopular: false,
+        },
+        {
+          id: 6,
+          label: "Sofa Bed",
+          checked: false,
+          isPopular: false,
+        },
+      ],
+    },
+    {
+      id: 16,
+      label: "Food and Drink",
+      checked: false,
+      options: [
+        {
+          id: 1,
+          label: "Buffet Lunch",
+          checked: false,
+          isPopular: false,
+        },
+        {
+          id: 2,
+          label: "Buffet Dinner",
+          checked: false,
+          isPopular: false,
+        },
+        {
+          id: 3,
+          label: "Menu Lunch",
+          checked: false,
+          isPopular: false,
+        },
+      ],
+    },
+    {
+      id: 22,
+      label: "sdfsdf",
+      checked: false,
+      options: [],
+    },
+  ];
+
+  const unifiedOptions = array.flatMap((category) => category.options);
+
+  console.log(unifiedOptions);
+};
