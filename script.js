@@ -1,4 +1,4 @@
-import { getDaysFromDateRange } from "./src/dates.js";
+import { reduceAndGenerateObject } from "./src/arrayReduce.js";
 
 console.log("---------------------------------------------------------");
 console.log("|                   Testing Ground                      |");
@@ -9,7 +9,7 @@ console.log("");
  *
  */
 
-getDaysFromDateRange();
+reduceAndGenerateObject();
 
 /**
  *
