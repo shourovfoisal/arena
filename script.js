@@ -1,4 +1,4 @@
-import { reduceAndGenerateObject } from "./src/arrayReduce.js";
+import { variableAssignCopyTest } from "./src/objectCopy.js";
 
 console.log("---------------------------------------------------------");
 console.log("|                   Testing Ground                      |");
@@ -9,7 +9,7 @@ console.log("");
  *
  */
 
-reduceAndGenerateObject();
+variableAssignCopyTest();
 
 /**
  *
