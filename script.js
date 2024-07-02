@@ -1,4 +1,4 @@
-import { variableAssignCopyTest } from "./src/objectCopy.js";
+import { onlyDigitsDotAndMinus } from "./src/regex/numberRegex.js";
 
 console.log("---------------------------------------------------------");
 console.log("|                   Testing Ground                      |");
@@ -9,7 +9,7 @@ console.log("");
  *
  */
 
-variableAssignCopyTest();
+onlyDigitsDotAndMinus();
 
 /**
  *
