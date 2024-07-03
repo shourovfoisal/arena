@@ -1,4 +1,4 @@
-import { onlyDigitsDotAndMinus } from "./src/regex/numberRegex.js";
+import { asynchronicity } from "./src/promise/promiseAll.js";
 
 console.log("---------------------------------------------------------");
 console.log("|                   Testing Ground                      |");
@@ -9,7 +9,7 @@ console.log("");
  *
  */
 
-onlyDigitsDotAndMinus();
+asynchronicity();
 
 /**
  *
