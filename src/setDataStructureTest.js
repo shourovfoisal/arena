@@ -1,4 +1,4 @@
-export const setTest = () => {
+export const setDataStructureTest = () => {
   const mySet = new Set([1, 2]);
   const anotherSet = new Set(mySet); // clones the existing set
 

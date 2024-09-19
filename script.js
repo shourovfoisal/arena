@@ -1,4 +1,4 @@
-import { max18DigitsRegex } from "./src/regex/maxDigitsRegex.js";
+import { mapDataStructureTest } from "./src/mapDataStructureTest.js";
 
 console.log("---------------------------------------------------------");
 console.log("|                   Testing Ground                      |");
@@ -8,7 +8,7 @@ console.log("");
  *
  *
  */
-max18DigitsRegex();
+mapDataStructureTest();
 /**
  *
  *
