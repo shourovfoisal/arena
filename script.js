@@ -1,4 +1,5 @@
-import { mapDataStructureTest } from "./src/mapDataStructureTest.js";
+import util from "util";
+import { adaptMenuList, currentMenuList } from "./src/recursion.js";
 
 console.log("---------------------------------------------------------");
 console.log("|                   Testing Ground                      |");
@@ -8,7 +9,13 @@ console.log("");
  *
  *
  */
-mapDataStructureTest();
+console.log(
+  util.inspect(adaptMenuList(currentMenuList), {
+    showHidden: false,
+    depth: null,
+    colors: true,
+  })
+);
 /**
  *
  *
